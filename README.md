@@ -1,5 +1,4 @@
 Стэк:
-
 - HTML
 - CSS
 - JavaScript
