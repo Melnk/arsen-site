@@ -1,0 +1,183 @@
+/* 1. СБРОС СТИЛЕЙ ПО УМОЛЧАНИЮ (Важно для единообразия в разных браузерах) */
+* {
+    box-sizing: border-box; /* Теперь padding и border входят в width/height */
+    margin: 0;
+    padding: 0;
+}
+/* 1. Селектор по тегу */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5; /* Увеличивает межстрочный интервал для удобства чтения */
+    color:#333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(to right, #333, #555);  
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+nav {
+    background-color: #333;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* 2. Селектор по тегу */
+nav ul {
+    list-style-type: none; /* Убирает маркеры (точки) у списка */
+    padding: 0;
+    display: flex;
+    background-color: #333; /* Темный фон для меню */
+    overflow: hidden; /* Обязательно для следующего шага */
+    justify-content: center;
+}
+
+/* 3. Селектор по тегу (вложенность) */
+nav li {
+    float: left;
+    margin: 0; /* Размещает пункты меню в одну линию */
+}
+
+/* 4. Селектор по тегу (вложенность) */
+nav a {
+    display: block; /* Ссылка становится блочным элементом, занимает всю площадь li */
+    color: white; /* Белый цвет текста */
+    text-align: center;
+    padding: 15px 20px; /* Внутренние отступы сверху/снизу и слева/справа */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* 5. Селектор по классу (псевдокласс) */
+nav a:hover {
+    background-color: #111; /* Цвет фона при наведении курсора */
+}
+
+main {
+    padding: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#contact-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    border-top: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6b6b;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /*способ задать отступ между элементами */
+    justify-content: center;
+}
+
+.container {
+    text-align: center; /* Центрирует весь текст внутри контейнера */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.gallery-container img {
+    
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03); /* Легкое увеличение при наведении */
+}
+/* 6. Селектор по классу */
+.highlight {
+    background-color: yellow;
+    padding: 5px;
+}
+
+/* 7. Селектор по id */
+#header {
+    text-align: center;
+}
+
+/* Стили specifically для страницы багажника */
+
+/* 21. СЕЛЕКТОР ПО ID */
+#trunk-button {
+    display: block; /* Делаем кнопку блочным элементом */
+    margin: 20px auto; /* Центрируем по горизонтали с отступами сверху/снизу */
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #2ecc71; /* Зеленый цвет */
+}
+
+/* 22. СЕЛЕКТОР ПО ID (Псевдокласс) */
+#trunk-button:hover {
+    background-color: #27ae60; /* Темно-зеленый при наведении */
+}
+
+/* 23. СЕЛЕКТОР ПО ID (для изображения) */
+#trunk-image {
+    display: block;
+    margin: 0 auto; /* Центрируем картинку */
+    border: 3px solid #333; /* Добавляем рамку */
+    text-align: center;
+}
