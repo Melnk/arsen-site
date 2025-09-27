@@ -2,32 +2,37 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Багажник | Арсен Макарян</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Багажник - Арсен Маркарян</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button id="menuToggle" class="menu-toggle">☰ Меню</button>
 
-    <nav>
+    <nav id="mainNav" class="nav-sidebar">
         <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="bio.html">Биография</a></li>
             <li><a href="gallery.html">Галерея</a></li>
             <li><a href="bag.html">Багажник</a></li>
         </ul>
+        <button class="close-btn">×</button>
     </nav>
 
+    <div id="overlay" class="overlay"></div>
+
     <div class="container">
-        <h1>Секретный багажник</h1>
-        <p>Нажми на кнопку, чтобы открыть багажник и увидеть, что внутри!</p>
-        
-        <!-- Переносим изображение и кнопку внутрь контейнера -->
-        <img src="images/trunk_closed.jpg" alt="Багажник автомобиля" id="trunk-image" width="500">
-        <br>
-        <button id="trunk-button">Открыть багажник!</button>
+        <header>
+            <h1>Секретный багажник</h1>
+            <p>Нажмите на кнопку, чтобы открыть багажник и увидеть, что внутри!</p>
+        </header>
+
+        <main>
+            <img src="images/trunk_closed.jpg" alt="Закрытый багажник" id="trunk-image">
+            <button id="trunk-button">Открыть багажник!</button>
+        </main>
     </div>
 
-    <!-- Подключаем внешний JavaScript файл -->
     <script src="script.js"></script>
-    
 </body>
 </html>

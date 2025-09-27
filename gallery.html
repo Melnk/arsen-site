@@ -2,29 +2,41 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Галлерея | Арсен Макарян</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Арсен Маркарян</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav>
+<body class="gallery-page">
+    <button id="menuToggle" class="menu-toggle">☰ Меню</button>
+
+    <nav id="mainNav" class="nav-sidebar">
         <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="bio.html">Биография</a></li>
             <li><a href="gallery.html">Галерея</a></li>
             <li><a href="bag.html">Багажник</a></li>
         </ul>
+        <button class="close-btn">×</button>
     </nav>
 
-    <div class="gallery-container">
-    <h1>Галерея наслаждения в разработке</h1>
-    <!-- Здесь будет уникальный контент для каждой страницы -->
-    <img src="photo_2025-09-10_11-22-19.jpg" alt="Арсен Макарян">
-    <img src="photo_2025-09-10_11-28-45.jpg" alt="Попался как кабанчик">
-    <img src="photo_2025-09-10_11-17-03.jpg" alt="Макароныч">
-    <img src="photo_2025-09-10_11-31-00.jpg" alt="Макароныч">
-    <img src="photo_2025-09-10_11-31-16.jpg" alt="Макароныч">
-    
-    
+    <div id="overlay" class="overlay"></div>
+
+    <div class="container">
+        <header>
+            <h1>Галерея наслаждения</h1>
+        </header>
+
+        <main>
+            <div class="gallery-container">
+                <img src="photo_2025-09-10_11-28-45.jpg" alt="Попался как кабанчик">
+                <img src="photo_2025-09-10_11-17-03.jpg" alt="Макароныч">
+                <img src="photo_2025-09-10_11-22-19.jpg" alt="Шлюхоброня">
+                <img src="photo_2025-09-10_11-31-00.jpg" alt="Макароныч">
+                <img src="photo_2025-09-10_11-31-16.jpg" alt="Макароныч">
+            </div>
+        </main>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
