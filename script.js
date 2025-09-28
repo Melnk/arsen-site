@@ -83,3 +83,24 @@ if (contactForm) {
 document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('loaded');
 });
+
+const themeToggle = document.getElementById('theme-toggle');
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+
+    // сохраняем выбор в localStorage, чтобы после перезагрузки помнить
+    if (document.body.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+
+  // при загрузке страницы читаем сохранённое
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark');
+  }
+}
